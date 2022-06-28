@@ -6,16 +6,14 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
 
-        //Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
+        //TermsPage can be child of MainPage and so requires registration
+        Routing.RegisterRoute(nameof(TermsPage), typeof(TermsPage));
 
         // when scanaction is picked from menu, page1 will know this
         MessagingCenter.Subscribe<AppShell, string>(page1, "scan", async (sender, arg) =>
         {
-            await DisplayAlert("Message received", "arg=" + arg, "OK");
+            await page1.DoScan(arg);
         });
-
-        // initial landing page will be our login
-        CurrentItem = mainpage;
     }
 
     protected override void OnNavigating(ShellNavigatingEventArgs args)

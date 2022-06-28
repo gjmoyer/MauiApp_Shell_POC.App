@@ -8,13 +8,19 @@
             Text="Show Terms And Conditions"
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
-
         <Border Padding="20"/>
 
-        <Button Text="I agree" Clicked="OnAgreeClicked" />
+        <VerticalStackLayout IsVisible="False">
 
-        <Border Padding="10"/>
+            <Button Text="I agree" Clicked="OnAgreeClicked" />
+            <Border Padding="10"/>
+            <Button Text="I do not agree" Clicked="OnDisagreeClicked"/>
 
-        <Button Text="I do not agree" Clicked="OnDisagreeClicked"/>
+            <VerticalStackLayout.Triggers>
+                <DataTrigger TargetType="VerticalStackLayout" Binding="{Binding IsLogin}" Value="True">
+                    <Setter Property="IsVisible" Value="True"/>
+                </DataTrigger>
+            </VerticalStackLayout.Triggers>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

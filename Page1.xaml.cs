@@ -6,4 +6,14 @@ public partial class Page1 : ContentPage
 	{
 		InitializeComponent();
     }
+
+	/// <summary>
+	/// initiate process the user requested
+	/// </summary>
+	/// <param name="arg"></param>
+	/// <returns></returns>
+	public async Task DoScan(string arg)
+	{
+        await DisplayAlert("Alert", arg, "OK");
+    }
 }

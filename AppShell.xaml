@@ -6,7 +6,8 @@
     xmlns:local="clr-namespace:MauiApp_Shell_POC"
     Shell.FlyoutBehavior="Flyout">
 
-    <!--login page appears only when app loads-->
+    <!-- login page appears only when app loads, since it is listed first here -->
+    <!-- flyout will not be visible on the login page -->
     <ShellItem Route="MainPage" FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}" x:Name="mainpage"/>
     </ShellItem>
@@ -52,4 +53,9 @@
     <FlyoutItem Title="Terms">
         <ShellContent Route="TermsPage" ContentTemplate="{DataTemplate local:TermsPage}"/>
     </FlyoutItem>
+
+    <FlyoutItem Title="Logout">
+        <ShellContent Route="Logout" ContentTemplate="{DataTemplate local:MainPage}"/>
+    </FlyoutItem>
+
 </Shell>

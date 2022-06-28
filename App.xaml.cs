@@ -2,7 +2,10 @@
 
 public partial class App : Application
 {
-	public App(AppShell appshell)
+    // ideally this value stored in database so users only asked once
+	public static bool UserTermsAgreed = false;
+
+    public App(AppShell appshell)
 	{
 		InitializeComponent();
 
