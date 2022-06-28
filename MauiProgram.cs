@@ -18,7 +18,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<Page1>();
         builder.Services.AddSingleton<Page2>();
         builder.Services.AddSingleton<Page3>();
-
+        builder.Services.AddSingleton<TermsPage>();
 
         return builder.Build();
 	}

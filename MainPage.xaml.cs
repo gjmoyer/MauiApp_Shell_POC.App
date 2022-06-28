@@ -2,18 +2,18 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
-	public MainPage()
+	public MainPage(TermsPage terms)
 	{
 		InitializeComponent();
 	}
 
 	async void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
+        //user must agree to terms and conditions before allowing app usage
+        //await Shell.Current.GoToAsync($"//{nameof(TermsPage)}");
 
-		await Shell.Current.GoToAsync("//Page1tab1");
+        // after successful login, this will be our landing page for authenticated users
+        await Shell.Current.GoToAsync("//Page1tab1");
     }
 }
 

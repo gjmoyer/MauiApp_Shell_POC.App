@@ -7,9 +7,9 @@
     Shell.FlyoutBehavior="Flyout">
 
     <!--login page appears only when app loads-->
-    <FlyoutItem Title="Home" IsVisible="False">
-        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" x:Name="loginpage"/>
-    </FlyoutItem>
+    <ShellItem Route="MainPage" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" x:Name="mainpage"/>
+    </ShellItem>
     
     <FlyoutItem Title="Page1">
         <Tab Title="Page1">
@@ -49,4 +49,7 @@
         <ShellContent Route="scanaction" ContentTemplate="{DataTemplate local:Page2}"/>
     </FlyoutItem>
 
+    <FlyoutItem Title="Terms">
+        <ShellContent Route="TermsPage" ContentTemplate="{DataTemplate local:TermsPage}"/>
+    </FlyoutItem>
 </Shell>

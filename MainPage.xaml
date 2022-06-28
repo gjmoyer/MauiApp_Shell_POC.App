@@ -4,7 +4,9 @@
              x:Class="MauiApp_Shell_POC.MainPage"
              Shell.NavBarIsVisible="False"
              Shell.FlyoutItemIsVisible="False">
-			 
+
+    <!-- we disable the flyout and navbar on our login page -->			 
+
     <ScrollView>
         <VerticalStackLayout 
             Spacing="25" 
